@@ -2,6 +2,7 @@
 
 /* portrait */
 
-body{
-background: url(../imagens/cev-portrait.jpg);
+body {
+    background: url(../imagens/cev-portrait.jpg);
+    background-position: center bottom;
 }
