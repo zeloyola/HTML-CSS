@@ -7,9 +7,10 @@
     <title>Menu responsivo</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/media-query.css">
 </head>
 
-<body>
+<body onresize="mudouTamanho()">
     <header>
         <h1>Meu Site</h1>
         <i id="burguer" class="material-icons" onclick="clickMenu()">menu</i>
@@ -32,13 +33,15 @@
                 accusamus nihil eligendi atque animi quod ea ex, cumque cupiditate, dicta modi asperiores aliquam vel
                 sint. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate eaque nisi dolorum omnis
                 sequi? Vero quos nulla magni doloribus consequuntur, aliquid optio obcaecati reprehenderit, quae vitae
-                fugit odit laudantium hic.</p>
+                fugit odit laudantium hic.
+            </p>
 
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum nemo cum dignissimos impedit distinctio
                 fugit fugiat ipsam, omnis illo possimus iste dicta incidunt voluptatum ratione soluta consectetur at
                 voluptates minus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis placeat non modi
                 voluptas magni fugiat rerum quia repellendus, voluptatibus quas, odio aperiam aut fuga in? Quia
-                doloribus sapiente animi minus.</p>
+                doloribus sapiente animi minus.
+            </p>
 
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae natus pariatur culpa molestiae
                 reprehenderit alias expedita vitae. Cum vero necessitatibus commodi rerum, ipsa architecto, recusandae
@@ -46,10 +49,20 @@
                 Maxime ad aspernatur consequatur accusantium soluta dolorum, deserunt sed alias tempora at vel magni cum
                 earum sequi odio impedit reiciendis harum suscipit. Lorem ipsum, dolor sit amet consectetur adipisicing
                 elit. Dolore blanditiis deserunt numquam autem veniam. Doloremque pariatur explicabo sit quidem aliquam
-                iste doloribus et ab aperiam voluptas, culpa veniam! Voluptatibus, nemo.</p>
+                iste doloribus et ab aperiam voluptas, culpa veniam! Voluptatibus, nemo.
+            </p>
         </article>
     </main>
     <script>
+
+        function mudouTamanho() {
+            if (innerWidth >= 768) {
+                itens.style.display = 'block'
+            } else {
+                itens.style.display = 'none'
+            }
+        }
+
         function clickMenu() {
             if (itens.style.display == 'block') {
                 itens.style.display = 'none'
